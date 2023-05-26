@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Test case 1",
+    "method": "GET",
+    "endpoint": "/users",
+    "headers": {
+      "Authorization": "Bearer token123"
+    },
+    "params": {
+      "page": 1,
+      "limit": 10
+    },
+    "expected_status": 200,
+    "expected_response": {
+      "success": true,
+      "data": []
+    }
+  },
+  {
+    "name": "Test case 2",
+    "method": "POST",
+    "endpoint": "/users",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "params": {
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    "expected_status": 201,
+    "expected_response": {
+      "success": true,
+      "message": "User created successfully"
+    }
+  }
+]
